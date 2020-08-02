@@ -1,6 +1,7 @@
 import React from "react";
+import propTypes from "prop-types";
 
-import { Container } from "./styled";
+import * as S from "./styled";
 
 const ButtonWrapper = ({
   children,
@@ -10,15 +11,22 @@ const ButtonWrapper = ({
   ...props
 }) => {
   return (
-    <Container
+    <S.Container
       backgroundColor={backgroundColor}
       color={color}
       outlined={outlined}
       {...props}
     >
       {children}
-    </Container>
+    </S.Container>
   );
+};
+
+ButtonWrapper.propTypes = {
+  children: propTypes.node.isRequired,
+  backgroundColor: propTypes.string.isRequired,
+  color: propTypes.string.isRequired,
+  outlined: propTypes.bool.isRequired,
 };
 
 export { ButtonWrapper as Button };

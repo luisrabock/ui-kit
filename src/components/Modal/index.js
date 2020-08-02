@@ -1,17 +1,25 @@
 import React from "react";
+import propTypes from "prop-types";
 
-import { FullScreen, Container, Close } from "./styled";
+import * as S from "./styled";
 
 export const Modal = ({ open, setOpen, title, children, ...props }) => {
   return (
-    <FullScreen open={open}>
-      <Container {...props} title={title}>
-        <Close onClick={() => setOpen(false)}>X</Close>
+    <S.FullScreen open={open}>
+      <S.Container {...props} title={title}>
+        <S.Close onClick={() => setOpen(false)}>X</S.Close>
 
         <h2>{title}</h2>
 
         {children}
-      </Container>
-    </FullScreen>
+      </S.Container>
+    </S.FullScreen>
   );
+};
+
+Modal.propTypes = {
+  open: propTypes.bool.isRequired,
+  setOpen: propTypes.func.isRequired,
+  title: propTypes.string.isRequired,
+  children: propTypes.node.isRequired,
 };

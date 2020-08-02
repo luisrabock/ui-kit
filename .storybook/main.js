@@ -4,5 +4,6 @@ module.exports = {
     "@storybook/addon-actions",
     "@storybook/addon-links",
     "@storybook/addon-centered/react",
+    "@storybook/addon-knobs/register",
   ],
 };
