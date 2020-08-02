@@ -4,8 +4,8 @@ import centered from "@storybook/addon-centered/react";
 
 import { Button } from "../src";
 
-storiesOf("Button", module)
+storiesOf("Botão", module)
   .addDecorator(centered)
-  .add("Default", () => <Button>Default</Button>)
-  .add("Outlined", () => <Button outlined>Outlined</Button>)
-  .add("Disabled", () => <Button disabled>Default</Button>);
+  .add("Padrão", () => <Button>Padrão</Button>)
+  .add("Delineado", () => <Button outlined>Delineado</Button>)
+  .add("Desabilitado", () => <Button disabled>Desabilitado</Button>);

@@ -3,9 +3,9 @@ import { storiesOf } from "@storybook/react";
 import centered from "@storybook/addon-centered/react";
 import { Separator } from "../src";
 
-storiesOf("Separator", module)
+storiesOf("Separador", module)
   .addDecorator(centered)
-  .add("Default", () => (
+  .add("Padrão", () => (
     <div
       style={{
         width: "300px",

@@ -1,0 +1,40 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
+
+import { Button } from "../src";
+
+<Meta decorators={[withKnobs]} title="Knobs + docs|Botão" component={Button} />
+
+# Botão
+
+## Sem passagem de props, renderiza um botão default
+
+<Story name="padrão">
+  <Button>Padrão</Button>
+</Story>
+
+## Passando a prop ```disabled``` com o valor true, é renderizado um botão desabilitado
+
+<Story name="desabilitado">
+  <Button disabled={boolean("Disabled", true)}>Desabilitado</Button>
+</Story>
+
+## Passando a prop ```outlined``` com o valor true, é renderizado um botão delineado
+
+<Story name="delineado">
+  <Button outlined={boolean("Outlined", true)}>Delineado</Button>
+</Story>
+
+##  Tamanhos
+
+### 4 tamanhos de botão são suportados, você pode passar o tamanho na prop ```size```.
+
+<Story name="tamanhos">
+  <div>
+    <Button size={text("Size_small", "small")}>Botão pequeno</Button>
+    <Button size={text("Size_medium", "medium")}>Botão médio</Button>
+    <Button size={text("Size_large", "large")}>Botão grande</Button>
+    <Button size={text("Size_extraLarge", "extra-large")}>Botão extra grande</Button>
+  </div>
+</Story>
+

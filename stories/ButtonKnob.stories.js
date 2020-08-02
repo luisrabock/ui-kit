@@ -5,24 +5,26 @@ import centered from "@storybook/addon-centered/react";
 
 import { Button } from "../src";
 
-storiesOf("ButtonKnobs", module)
+storiesOf("Botão + Knobs", module)
   .addDecorator(centered)
   .addDecorator(withKnobs)
-  .add("Default", () => (
+  .add("Botão", () => (
     <Button
       label="Normal button"
       outlined={boolean("Outlined", true)}
       disabled={boolean("Disabled", true)}
     >
-      {text("Text", "Hello Button")}
+      {text("Text", "Botão")}
     </Button>
   ))
-  .add("Custom button", () => (
+  .add("Botão customizado", () => (
     <Button
       label="Custom style"
       style={object("style", {
         backgroundColor: "pink",
         border: "5px dotted limegreen",
       })}
-    />
+    >
+      {text("Text", "Botão CSS customizado")}
+    </Button>
   ));

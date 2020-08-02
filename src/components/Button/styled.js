@@ -5,9 +5,11 @@ export const Container = styled.button`
   background-color: ${(props) =>
     props.outlined ? "transparent" : props.backgroundColor};
   color: ${(props) => readableColor(props.color, "#fff", "#19181f")};
+  font-size: ${(props) => (props.size ? props.size : "10px")};
   padding: 18px 45px;
   text-transform: uppercase;
   font-weight: bold;
+  margin: 5px 5px 5px 5px;
   border-radius: 4px;
   border: ${(props) =>
     props.outlined ? `2px solid ${props.backgroundColor}` : "none"};
